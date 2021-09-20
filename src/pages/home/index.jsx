@@ -1,8 +1,8 @@
 import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 import AnimePill from '../../components/AnimePill/AnimePill';
-import Pagination from '../../components/Pagination';
-import Quote from '../../components/Quote';
+import Pagination from '../../components/Pagination/Pagination';
+import Quote from '../../components/Quote/Quote';
 import { slicedAnimeTitles, animeTitles } from '../../store';
 
 const StyledHomePage = styled.div`
@@ -46,7 +46,7 @@ const StyledHomePage = styled.div`
   }
 `;
 
-const Homepage = () => {
+const HomePage = () => {
     const animes= useRecoilValue(animeTitles);
     const slicedAnimes = useRecoilValue(slicedAnimeTitles);
     const colors = ["#FAE1DA", "#E8C6AD", "#F2E2ED", "#D6EBE4", "#BFDCD0"];
@@ -90,4 +90,4 @@ const Homepage = () => {
     );
 };
 
-export default Homepage;
+export default HomePage;
